@@ -2,6 +2,10 @@ title: My Cookbook
 description: A collection of my personal recipes
 theme: minima
 
+baseurl: "/cookbook"
+url: "https://j0ma-r.github.io"
+
+
 collections:
   recipes:
     output: true
