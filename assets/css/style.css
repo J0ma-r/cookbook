@@ -52,6 +52,12 @@ body {
   gap: 30px;
 }
 
+.recipe-content h2 {
+  margin-top: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
 @media (max-width: 700px) {
   .recipe-columns {
     grid-template-columns: 1fr;

@@ -14,18 +14,8 @@
   <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
 {% endif %}
 
-<div class="recipe-columns">
-
-<div>
-  <h2>Ingredients</h2>
-  {{ content | split: "## Instructions" | first }}
-</div>
-
-<div>
-  <h2>Instructions</h2>
-  {{ content | split: "## Instructions" | last }}
-</div>
-
+<div class="recipe-content">
+  {{ content }}
 </div>
 
 </div>
