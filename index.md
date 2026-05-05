@@ -5,12 +5,16 @@ title: My Cookbook
 
 # 🍲 My Cookbook
 
-## Recipes
-
-<ul>
+<div class="recipe-grid">
 {% for recipe in site.recipes %}
-  <li>
-    <a href="{{ recipe.url | relative_url }}">{{ recipe.title }}</a>
-  </li>
+  <a class="recipe-card" href="{{ recipe.url | relative_url }}">
+    
+    {% if recipe.image %}
+      <img src="{{ recipe.image | relative_url }}" alt="{{ recipe.title }}">
+    {% endif %}
+    
+    <h3>{{ recipe.title }}</h3>
+    
+  </a>
 {% endfor %}
-</ul>
+</div>
