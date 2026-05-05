@@ -1,3 +1,7 @@
 title: My Cookbook
 description: A collection of my personal recipes
-theme: minima
+theme: jekyll-theme-minimal
+
+collections:
+  recipes:
+    output: true

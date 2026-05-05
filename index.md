@@ -5,8 +5,12 @@ title: My Cookbook
 
 # 🍲 My Cookbook
 
-Welcome to my personal recipe collection.
-
 ## Recipes
 
-- Coming soon...
+<ul>
+{% for recipe in site.recipes %}
+  <li>
+    <a href="{{ recipe.url }}">{{ recipe.title }}</a>
+  </li>
+{% endfor %}
+</ul>
