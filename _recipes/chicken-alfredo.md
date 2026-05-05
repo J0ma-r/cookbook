@@ -14,9 +14,5 @@ image: /assets/images/chicken-alfredo.jpg
 ## Instructions
 1. Cook pasta
 2. Cook chicken
-3. Add cream and garlic
-4. Mix everything together
-5. Top with parmesan
-
-## Notes
-- Add mushrooms if you like
+3. Add sauce
+4. Mix together
