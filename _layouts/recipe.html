@@ -1,24 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
+---
+layout: default
+---
 
-<div class="recipe-container">
+<div class="recipe-page active">
 
-<h1>{{ page.title }}</h1>
+<a class="back-btn"
+   href="{{ '/' | relative_url }}">
+← Back to all recipes
+</a>
 
-{% if page.image %}
-  <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-{% endif %}
+<img class="recipe-hero-img"
+     src="{{ page.image | relative_url }}"
+     alt="{{ page.title }}">
 
-<div class="recipe-content">
-  {{ content }}
+<div class="recipe-header">
+
+<p class="recipe-eyebrow">
+{{ page.category }}
+</p>
+
+<h1 class="recipe-title">
+{{ page.title }}
+</h1>
+
+</div>
+
+<div class="recipe-body">
+
+<aside>
+  <div class="ingredients-card">
+
+    <div class="ingredients-title">
+      Ingredients
+    </div>
+
+    {{ page.ingredients }}
+
+  </div>
+</aside>
+
+<div class="instructions-section">
+
+<p class="instructions-label">
+Instructions
+</p>
+
+{{ content }}
+
 </div>
 
 </div>
 
-</body>
-</html>
+</div>
