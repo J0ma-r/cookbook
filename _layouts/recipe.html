@@ -4,51 +4,69 @@ layout: default
 
 <div class="recipe-page active">
 
-<a class="back-btn"
-   href="{{ '/' | relative_url }}">
-← Back to all recipes
-</a>
+  <a class="back-btn" href="{{ '/' | relative_url }}">← Back to all recipes</a>
 
-<img class="recipe-hero-img"
-     src="{{ page.image | relative_url }}"
-     alt="{{ page.title }}">
+  <img class="recipe-hero-img" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
 
-<div class="recipe-header">
+  <div class="recipe-header">
+    <p class="recipe-eyebrow">{{ page.category }}</p>
+    <h1 class="recipe-title">{{ page.title }}</h1>
 
-<p class="recipe-eyebrow">
-{{ page.category }}
-</p>
+    <div class="recipe-meta-row">
+      {% if page.time %}
+      <span class="r-meta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        {{ page.time }}
+      </span>
+      {% endif %}
+      {% if page.servings %}
+      <span class="r-meta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M6 19V9a6 6 0 0 1 12 0v10"/></svg>
+        Serves {{ page.servings }}
+      </span>
+      {% endif %}
+      {% if page.difficulty %}
+      <span class="r-meta">
+        <span class="difficulty">
+          {% for i in (1..3) %}
+          <span class="dot{% if i <= page.difficulty %} filled{% endif %}"></span>
+          {% endfor %}
+        </span>
+      </span>
+      {% endif %}
+    </div>
+  </div>
 
-<h1 class="recipe-title">
-{{ page.title }}
-</h1>
+  <div class="recipe-body">
 
-</div>
+    <aside>
+      <div class="ingredients-card">
+        <div class="ingredients-title">
+          Ingredients
+          <span class="servings-ctrl">
+            <button class="serv-btn" onclick="changeServings(-1)">−</button>
+            <span id="servCount">{{ page.servings | default: 4 }}</span>
+            <button class="serv-btn" onclick="changeServings(1)">+</button>
+          </span>
+        </div>
 
-<div class="recipe-body">
+        <ul class="ing-list" data-base-servings="{{ page.servings | default: 4 }}">
+          {% for ing in page.ingredients %}
+          <li class="ing-item">
+            <span class="ing-name">{{ ing.name }}</span>
+            <span class="ing-amount"{% if ing.amount and ing.amount > 0 %} data-base="{{ ing.amount }}" data-unit="{{ ing.unit }}"{% endif %}>
+              {% if ing.amount and ing.amount > 0 %}{{ ing.amount }}{% if ing.unit and ing.unit != "" %} {{ ing.unit }}{% endif %}{% else %}{{ ing.unit }}{% endif %}
+            </span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </aside>
 
-<aside>
-  <div class="ingredients-card">
-
-    <div class="ingredients-title">
-      Ingredients
+    <div class="instructions-section">
+      <p class="instructions-label">Instructions</p>
+      {{ content }}
     </div>
 
-    {{ page.ingredients }}
-
   </div>
-</aside>
-
-<div class="instructions-section">
-
-<p class="instructions-label">
-Instructions
-</p>
-
-{{ content }}
-
-</div>
-
-</div>
-
 </div>
