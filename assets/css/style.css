@@ -289,7 +289,6 @@
     position: relative;
     aspect-ratio: 4/3;
     overflow: hidden;
-    background: var(--cream-mid);
   }
  
   .card-img img {
@@ -312,18 +311,9 @@
     border-radius: 50px;
   }
  
-  .card-badge { background: var(--cream-mid); color: var(--ink-mid); }
   .badge-pasta { background: var(--gold-light); color: #7A5810; }
   .badge-chicken { background: var(--terracotta-light); color: #7A3018; }
   .badge-vegetarian { background: var(--sage-light); color: #2A4A2C; }
-  .badge-dessert { background: var(--terracotta-light); color: #7A3018; }
-  .badge-soup { background: var(--sage-light); color: #2A4A2C; }
-  .badge-breakfast { background: var(--gold-light); color: #7A5810; }
-  .badge-beef { background: var(--terracotta-light); color: #7A3018; }
-  .badge-pork { background: var(--terracotta-light); color: #7A3018; }
-  .badge-dough { background: var(--gold-light); color: #7A5810; }
-  .badge-rice { background: var(--sage-light); color: #2A4A2C; }
-  .badge-dumplings { background: var(--terracotta-light); color: #7A3018; }
  
   .card-fav {
     position: absolute;
