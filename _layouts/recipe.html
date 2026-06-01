@@ -49,6 +49,42 @@ Instructions
 
 </div>
 
-</div>
+    <div class="recipe-meta-row">
+      {% if page.time %}
+      <span class="r-meta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        {{ page.time }}
+      </span>
+      {% endif %}
+      {% if page.servings %}
+      <span class="r-meta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M6 19V9a6 6 0 0 1 12 0v10"/></svg>
+        Serves {{ page.servings }}
+      </span>
+      {% endif %}
+      {% if page.difficulty %}
+      <span class="r-meta">
+        <span class="difficulty">
+          {% for i in (1..3) %}
+          <span class="dot{% if i <= page.difficulty %} filled{% endif %}"></span>
+          {% endfor %}
+        </span>
+      </span>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="recipe-body">
+
+    <aside>
+      <div class="ingredients-card">
+        <div class="ingredients-title">
+          Ingredients
+          <span class="servings-ctrl">
+            <button class="serv-btn" onclick="changeServings(-1)">−</button>
+            <span id="servCount">{{ page.servings | default: 4 }}</span>
+            <button class="serv-btn" onclick="changeServings(1)">+</button>
+          </span>
+        </div>
 
 </div>
