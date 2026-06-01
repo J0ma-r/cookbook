@@ -7,3 +7,7 @@ url: "https://j0ma-r.github.io"
 collections:
   recipes:
     output: true
+
+markdown: kramdown
+kramdown:
+  input: GFM
