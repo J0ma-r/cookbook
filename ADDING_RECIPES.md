@@ -43,3 +43,17 @@ Notes:
 - For a colored badge, add a `.badge-<category>` rule in `style.css`
   (lowercase). Unknown categories get a neutral default badge.
 - `amount: 0` ingredients (salt, pepper, "to taste") don't scale with servings.
+
+Serving scaling & units:
+- The recipe page lets the reader change the serving count (stepper, editable
+  field, and quick 1/2/4/6/8 presets). Amounts rescale from the `servings` you
+  set as the base.
+- Use **one clean unit** per ingredient so scaling stays accurate. Recognised
+  units auto-convert to avoid awkward fractions:
+  - Volume: `tsp`, `tbsp`, `cup`, `ml`, `L` (metric: cup 250 ml, tbsp 15, tsp 5).
+    Fractional spoons become `ml`; large volumes become `L`.
+  - Weight: `g`, `kg`.
+  - Countable: `piece(s)`, `clove(s)`, `egg(s)`, `slice(s)`, `can(s)`, etc.
+  - Anything else (`to taste`, `a handful`, `pinch`…) is treated as non-scaling
+    text — pair it with `amount: 0`.
+- Avoid dual units like `cups (219 g)`; pick one (grams are best for baking).

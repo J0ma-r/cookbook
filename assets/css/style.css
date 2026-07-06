@@ -309,11 +309,25 @@
     text-transform: uppercase;
     padding: 4px 10px;
     border-radius: 50px;
+    background: var(--cream-mid);
+    color: var(--ink-mid);
   }
- 
+
   .badge-pasta { background: var(--gold-light); color: #7A5810; }
   .badge-chicken { background: var(--terracotta-light); color: #7A3018; }
   .badge-vegetarian { background: var(--sage-light); color: #2A4A2C; }
+  .badge-beef { background: var(--terracotta-light); color: #7A3018; }
+  .badge-lamb { background: var(--terracotta-light); color: #7A3018; }
+  .badge-pork { background: var(--terracotta-light); color: #7A3018; }
+  .badge-breakfast { background: var(--gold-light); color: #7A5810; }
+  .badge-rice { background: var(--gold-light); color: #7A5810; }
+  .badge-noodles { background: var(--gold-light); color: #7A5810; }
+  .badge-salad { background: var(--sage-light); color: #2A4A2C; }
+  .badge-starter { background: var(--sage-light); color: #2A4A2C; }
+  .badge-side { background: var(--sage-light); color: #2A4A2C; }
+  .badge-dessert { background: #F3DCE8; color: #7A2850; }
+  .badge-dumplings { background: var(--sage-light); color: #2A4A2C; }
+  .badge-dough { background: var(--gold-light); color: #7A5810; }
  
   .card-fav {
     position: absolute;
@@ -526,13 +540,29 @@
   .servings-ctrl {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--ink-mid);
+    margin-bottom: 12px;
   }
- 
+
+  .servings-label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--ink-light);
+  }
+
+  .serv-stepper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
   .serv-btn {
-    width: 24px; height: 24px;
+    width: 26px; height: 26px;
     border-radius: 50%;
     border: 1px solid var(--border);
     background: white;
@@ -541,10 +571,58 @@
     font-size: 16px;
     line-height: 1;
     color: var(--ink-mid);
-    transition: border-color 0.15s;
+    transition: border-color 0.15s, color 0.15s;
   }
- 
+
   .serv-btn:hover { border-color: var(--terracotta); color: var(--terracotta); }
+
+  .serv-count {
+    width: 44px;
+    text-align: center;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 4px 2px;
+    outline: none;
+    -moz-appearance: textfield;
+  }
+
+  .serv-count:focus { border-color: var(--terracotta); }
+  .serv-count::-webkit-outer-spin-button,
+  .serv-count::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+  .serv-presets {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .serv-preset {
+    flex: 1;
+    padding: 6px 0;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-mid);
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .serv-preset:hover { border-color: var(--terracotta); color: var(--terracotta); }
+
+  .serv-preset.active {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+    color: white;
+  }
  
   .ing-list { list-style: none; }
  
