@@ -4,50 +4,15 @@ layout: default
 
 <div class="recipe-page active">
 
-<a class="back-btn"
-   href="{{ '/' | relative_url }}">
-← Back to all recipes
-</a>
+  <a class="back-btn" href="{{ '/' | relative_url }}">&larr; Back to all recipes</a>
 
-<img class="recipe-hero-img"
-     src="{{ page.image | relative_url }}"
-     alt="{{ page.title }}">
+  <img class="recipe-hero-img"
+       src="{{ page.image | relative_url }}"
+       alt="{{ page.title }}">
 
-<div class="recipe-header">
-
-<p class="recipe-eyebrow">
-{{ page.category }}
-</p>
-
-<h1 class="recipe-title">
-{{ page.title }}
-</h1>
-
-</div>
-
-<div class="recipe-body">
-
-<aside>
-  <div class="ingredients-card">
-
-    <div class="ingredients-title">
-      Ingredients
-    </div>
-
-    {{ page.ingredients }}
-
-  </div>
-</aside>
-
-<div class="instructions-section">
-
-<p class="instructions-label">
-Instructions
-</p>
-
-{{ content }}
-
-</div>
+  <div class="recipe-header">
+    <p class="recipe-eyebrow">{{ page.category }}</p>
+    <h1 class="recipe-title">{{ page.title }}</h1>
 
     <div class="recipe-meta-row">
       {% if page.time %}
@@ -78,13 +43,46 @@ Instructions
 
     <aside>
       <div class="ingredients-card">
-        <div class="ingredients-title">
-          Ingredients
-          <span class="servings-ctrl">
-            <button class="serv-btn" onclick="changeServings(-1)">−</button>
-            <span id="servCount">{{ page.servings | default: 4 }}</span>
-            <button class="serv-btn" onclick="changeServings(1)">+</button>
-          </span>
+        <div class="ingredients-title">Ingredients</div>
+
+        <div class="servings-ctrl">
+          <span class="servings-label">Serves</span>
+          <div class="serv-stepper">
+            <button class="serv-btn" onclick="changeServings(-1)" aria-label="Fewer servings">&minus;</button>
+            <input id="servCount" class="serv-count" type="number" min="1" max="99"
+                   value="{{ page.servings | default: 4 }}"
+                   data-base-servings="{{ page.servings | default: 4 }}"
+                   onchange="setServings(this.value)" aria-label="Number of servings">
+            <button class="serv-btn" onclick="changeServings(1)" aria-label="More servings">+</button>
+          </div>
         </div>
 
+        <div class="serv-presets">
+          {% assign presets = "1,2,4,6,8" | split: "," %}
+          {% for p in presets %}
+          <button class="serv-preset" data-serv="{{ p }}" onclick="setServings({{ p }})">{{ p }}</button>
+          {% endfor %}
+        </div>
+
+        <ul class="ing-list">
+          {% for ing in page.ingredients %}
+          <li class="ing-item">
+            <span class="ing-name">{{ ing.name }}</span>
+            {% if ing.amount and ing.amount != 0 %}
+            <span class="ing-amount" data-base="{{ ing.amount }}" data-unit="{{ ing.unit }}">{{ ing.amount }} {{ ing.unit }}</span>
+            {% else %}
+            <span class="ing-amount">{{ ing.unit }}</span>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </aside>
+
+    <div class="instructions-section">
+      <p class="instructions-label">Instructions</p>
+      {{ content }}
+    </div>
+
+  </div>
 </div>
