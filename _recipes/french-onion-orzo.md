@@ -3,7 +3,7 @@ layout: recipe
 title: Clayton's One Pan French Onion Orzo
 image: /assets/images/french-onion-orzo.svg
 description: French onion soup turned into a creamy, risotto-like orzo — caramelised onions, beef stock and melty Gruyère, all in one pan.
-category: Pasta
+category: Mains
 time: 1 hr 30 min
 servings: 3
 difficulty: 2

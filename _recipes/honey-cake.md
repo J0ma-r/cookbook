@@ -3,7 +3,7 @@ layout: recipe
 title: Mark's 8-Layer Honey Cake (Medovik)
 image: /assets/images/honey-cake.svg
 description: Soft Eastern European honey cake with thin honey-infused layers and a light sour cream frosting. Best made a day ahead.
-category: Dessert
+category: Desserts
 time: 2 hr 25 min
 servings: 12
 difficulty: 3

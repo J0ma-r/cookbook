@@ -3,7 +3,8 @@ layout: recipe
 title: Pizza Dough
 image: /assets/images/pizza.jpg
 description: A simple everyday pizza dough.
-category: Dough
+category: Mains
+vegetarian: true
 time: 2 hr 30 min
 servings: 2
 difficulty: 2
