@@ -10,10 +10,11 @@ layout: recipe
 title: Tomato Soup
 image: /assets/images/tomato-soup.jpg
 description: A short one-line description shown on the card.
-category: Soup            # becomes the badge + filter tag
+category: Soup            # course: Breakfast, Starters, Mains, Sides or Desserts
+tags: [Vegetarian, Warm]  # cross-cutting filter tags (see below)
 time: 25 min             # shown on card and recipe page
 servings: 4              # base servings; the +/- stepper scales from this
-difficulty: 1            # 1, 2, or 3 dots
+difficulty: 1            # 1 = Easy, 2 = Medium, 3 = Hard (shown as dots + label)
 ingredients:
   - name: Tomatoes, chopped
     amount: 800
@@ -39,7 +40,13 @@ ingredients:
 
 Notes:
 - Drop the photo in `assets/images/` and point `image:` at it.
-- `category` automatically creates a new filter tag and recipe count.
+- `category` is the single course; it becomes the badge and a filter chip,
+  and feeds the "Categories" count on the home page (both are dynamic).
+- `tags` is an optional list of cross-cutting filters (e.g. `Vegetarian`,
+  `Healthy`, `Warm`, `Cold`). Any new tag you add here automatically appears
+  as a filter chip on `/recipes/` and a quick-link on the home page — no other
+  edits needed. Tags are multi-select (matching any selected tag).
+- The `/recipes/` search matches the recipe title **and** its ingredient names.
 - For a colored badge, add a `.badge-<category>` rule in `style.css`
   (lowercase). Unknown categories get a neutral default badge.
 - `amount: 0` ingredients (salt, pepper, "to taste") don't scale with servings.

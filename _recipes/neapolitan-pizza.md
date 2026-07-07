@@ -4,7 +4,7 @@ title: Neapolitan Pizza
 image: /assets/images/neapolitan-pizza.jpg
 description: A long-rise dough for proper Neapolitan-style pizza.
 category: Mains
-vegetarian: true
+tags: [Vegetarian, Warm]
 time: overnight
 servings: 6
 difficulty: 3

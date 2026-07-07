@@ -4,6 +4,7 @@ title: Sausage Paella
 image: /assets/images/sausage-paella.jpg
 description: A one-pot rice with sausage, peppers and herbs.
 category: Mains
+tags: [Warm]
 time: 40 min
 servings: 3
 difficulty: 2

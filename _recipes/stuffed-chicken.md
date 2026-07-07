@@ -4,6 +4,7 @@ title: Stuffed Chicken
 image: /assets/images/stuffed-chicken.jpg
 description: Chicken breasts stuffed with chorizo, sundried tomato and mozzarella.
 category: Mains
+tags: [Warm]
 time: 45 min
 servings: 2
 difficulty: 2

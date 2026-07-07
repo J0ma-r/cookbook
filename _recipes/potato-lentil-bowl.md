@@ -4,7 +4,7 @@ title: Potato & Lentil Bowl
 image: /assets/images/potato-lentil-bowl.jpg
 description: A comforting one-pot of potatoes, lentils and greens.
 category: Mains
-vegetarian: true
+tags: [Vegetarian, Healthy, Warm]
 time: 50 min
 servings: 4
 difficulty: 1

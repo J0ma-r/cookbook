@@ -4,7 +4,7 @@ title: Gnocchi
 image: /assets/images/gnocchi.jpg
 description: Homemade potato gnocchi pan-fried with mushrooms.
 category: Mains
-vegetarian: true
+tags: [Vegetarian, Warm]
 time: 1 hr
 servings: 3
 difficulty: 2

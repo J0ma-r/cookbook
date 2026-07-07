@@ -4,6 +4,7 @@ title: Lizanne's Beef Mince Bake
 image: /assets/images/beef-mince-bake.svg
 description: Layers of potato, seasoned mince in tomato gravy, creamy white sauce and a soft savoury crust — comforting South African style.
 category: Mains
+tags: [Warm]
 time: 1 hr
 servings: 6
 difficulty: 2

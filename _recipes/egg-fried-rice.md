@@ -4,7 +4,7 @@ title: Egg Fried Rice
 image: /assets/images/egg-fried-rice.jpg
 description: A fast weeknight fried rice.
 category: Mains
-vegetarian: true
+tags: [Vegetarian, Healthy, Warm]
 time: 20 min
 servings: 2
 difficulty: 1

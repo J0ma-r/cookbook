@@ -41,6 +41,12 @@ layout: default
       </span>
       {% endif %}
     </div>
+
+    {% if page.tags %}
+    <div class="recipe-tags">
+      {% for t in page.tags %}<span class="rtag">{{ t }}</span>{% endfor %}
+    </div>
+    {% endif %}
   </div>
 
   <div class="recipe-body">

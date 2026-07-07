@@ -1,0 +1,12 @@
+{
+  "name": "cookbook",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tests for the cookbook's scaling logic and recipe data.",
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0"
+  }
+}

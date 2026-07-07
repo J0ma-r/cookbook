@@ -6,19 +6,22 @@ permalink: /recipes/
 
 {% assign cats = site.recipes | map: "category" | uniq | sort %}
 {% assign diffwords = "Easy,Medium,Hard" | split: "," %}
+{% assign tagstr = "" %}
+{% for r in site.recipes %}{% for t in r.tags %}{% assign tagstr = tagstr | append: t | append: "," %}{% endfor %}{% endfor %}
+{% assign alltags = tagstr | split: "," | uniq | sort %}
 
 <div id="browse-page">
 
   <div class="browse-head">
     <h1 class="page-title">All Recipes</h1>
-    <p class="page-sub">Search or filter to find something to cook. Pick more than one tag to combine.</p>
+    <p class="page-sub">Search by name or ingredient, or filter by tag. Pick more than one tag to combine.</p>
   </div>
 
   <div class="filters">
     <div class="filters-top">
       <div class="search-wrap">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
-        <input class="search-input" id="searchInput" type="text" placeholder="Search recipes&hellip;" oninput="filterCards()">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search recipes or ingredients&hellip;" oninput="filterCards()">
       </div>
       <p class="difficulty-legend">
         <span class="difficulty"><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></span> Easy
@@ -32,7 +35,10 @@ permalink: /recipes/
       {% for cat in cats %}
       <button class="tag" data-tag="{{ cat | downcase }}" onclick="toggleTag(this, '{{ cat | downcase }}')">{{ cat }}</button>
       {% endfor %}
-      <button class="tag tag-diet" data-tag="vegetarian" onclick="toggleTag(this, 'vegetarian')">Vegetarian</button>
+      <span class="tag-divider" aria-hidden="true"></span>
+      {% for t in alltags %}
+      <button class="tag tag-attr" data-tag="{{ t | downcase }}" onclick="toggleTag(this, '{{ t | downcase }}')">{{ t }}</button>
+      {% endfor %}
     </div>
   </div>
 
@@ -41,7 +47,8 @@ permalink: /recipes/
     {% assign di = recipe.difficulty | minus: 1 %}
     <a class="card"
        href="{{ recipe.url | relative_url }}"
-       data-tags="{{ recipe.category | downcase }}{% if recipe.vegetarian %} vegetarian{% endif %}">
+       data-tags="{{ recipe.category | downcase }}{% for t in recipe.tags %} {{ t | downcase }}{% endfor %}"
+       data-ingredients="{% for ing in recipe.ingredients %}{{ ing.name | downcase | escape }} {% endfor %}">
       <div class="card-img">
         <img src="{{ recipe.image | relative_url }}" alt="{{ recipe.title }}" loading="lazy">
         <span class="card-badge badge-{{ recipe.category | downcase }}">{{ recipe.category }}</span>
