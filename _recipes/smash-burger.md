@@ -3,7 +3,8 @@ layout: recipe
 title: Smash Burger
 image: /assets/images/smash-burger.jpg
 description: Thin, crispy-edged beef patties smashed on a hot pan with melted cheese.
-category: Beef
+category: Mains
+featured: true
 time: 20 min
 servings: 2
 difficulty: 1

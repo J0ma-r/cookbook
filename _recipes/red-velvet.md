@@ -3,7 +3,7 @@ layout: recipe
 title: Rheeder's Red Velvet (Fluweelkoek)
 image: /assets/images/red-velvet.svg
 description: Soft, vivid red sponge with a hint of cocoa, layered with tangy cream cheese frosting and glossy chocolate ganache.
-category: Dessert
+category: Desserts
 time: 55 min
 servings: 12
 difficulty: 2

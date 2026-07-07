@@ -3,7 +3,7 @@ layout: recipe
 title: Hein's Perfect Ribeye for 2
 image: /assets/images/ribeye.svg
 description: Flame-grilled, herb-infused ribeye rested on a bed of garlic, thyme and rosemary with salted butter. Ideal medium-rare.
-category: Beef
+category: Mains
 time: 6 hr rest + 20 min
 servings: 2
 difficulty: 2

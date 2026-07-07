@@ -1,12 +1,23 @@
 /* ============================================================
-   Home page: search + category filtering
+   Browse page: search + multi-select category filtering
    ============================================================ */
-let currentTag = 'all';
+const activeTags = new Set();
 
-function setTag(el, tag) {
-  document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
-  el.classList.add('active');
-  currentTag = tag;
+function syncAllButton() {
+  const allBtn = document.querySelector('.tag[data-tag="all"]');
+  if (allBtn) allBtn.classList.toggle('active', activeTags.size === 0);
+}
+
+function toggleTag(el, tag) {
+  if (tag === 'all') {
+    activeTags.clear();
+    document.querySelectorAll('.tag').forEach(t => t.classList.remove('active'));
+  } else {
+    el.classList.toggle('active');
+    if (el.classList.contains('active')) activeTags.add(tag);
+    else activeTags.delete(tag);
+  }
+  syncAllButton();
   filterCards();
 }
 
@@ -18,8 +29,9 @@ function filterCards() {
   let visible = 0;
   cards.forEach(card => {
     const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
-    const tags = card.dataset.tags || '';
-    const matchTag = currentTag === 'all' || tags.includes(currentTag);
+    const tags = (card.dataset.tags || '').split(/\s+/);
+    // Multi-select is OR: show a card if it matches ANY selected tag.
+    const matchTag = activeTags.size === 0 || [...activeTags].some(t => tags.includes(t));
     const matchQ = !q || title.includes(q);
     const show = matchTag && matchQ;
     card.style.display = show ? '' : 'none';
@@ -27,6 +39,14 @@ function filterCards() {
   });
   const empty = document.getElementById('emptyState');
   if (empty) empty.style.display = visible === 0 ? 'block' : 'none';
+}
+
+// Preselect a filter when arriving via a /recipes/#category link from the home page.
+function applyHashFilter() {
+  const hash = decodeURIComponent((location.hash || '').replace('#', '')).toLowerCase();
+  if (!hash) return;
+  const btn = document.querySelector('.tag[data-tag="' + hash.replace(/"/g, '') + '"]');
+  if (btn && !btn.classList.contains('active')) toggleTag(btn, hash);
 }
 
 /* ============================================================
@@ -192,7 +212,12 @@ document.addEventListener('DOMContentLoaded', () => {
     baseServings = parseFloat(input.dataset.baseServings) || 4;
     servings = baseServings;
     input.value = String(servings);
+    updatePresets();
+    renderIngredients();
   }
-  updatePresets();
-  renderIngredients();
+  // Browse page only
+  if (document.getElementById('recipeGrid')) {
+    applyHashFilter();
+    filterCards();
+  }
 });

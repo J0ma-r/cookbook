@@ -3,10 +3,11 @@ layout: recipe
 title: Gnocchi
 image: /assets/images/gnocchi.jpg
 description: Homemade potato gnocchi pan-fried with mushrooms.
-category: Pasta
+category: Mains
+vegetarian: true
 time: 1 hr
 servings: 3
-difficulty: 3
+difficulty: 2
 ingredients:
   - name: Large potatoes
     amount: 2

@@ -3,7 +3,7 @@ layout: recipe
 title: Korean Chicken Bao
 image: /assets/images/korean-chicken-bao.jpg
 description: Soft steamed bao buns stuffed with sticky gochujang-glazed fried chicken.
-category: Chicken
+category: Mains
 time: 45 min
 servings: 4
 difficulty: 2

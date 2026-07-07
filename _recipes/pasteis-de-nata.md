@@ -3,7 +3,8 @@ layout: recipe
 title: Marco's Pastéis de Nata
 image: /assets/images/pasteis-de-nata.svg
 description: As close to authentic Portuguese custard tarts as you can get — rich egg custard in shatteringly crisp pastry.
-category: Dessert
+category: Desserts
+featured: true
 time: 2 hr 30 min + overnight
 servings: 40
 difficulty: 3

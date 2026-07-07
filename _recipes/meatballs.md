@@ -3,7 +3,7 @@ layout: recipe
 title: Meatballs
 image: /assets/images/meatballs.jpg
 description: Baked beef meatballs with mozzarella in tomato sauce.
-category: Beef
+category: Mains
 time: 45 min
 servings: 4
 difficulty: 2

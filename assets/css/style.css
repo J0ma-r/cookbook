@@ -328,6 +328,13 @@
   .badge-dessert { background: #F3DCE8; color: #7A2850; }
   .badge-dumplings { background: var(--sage-light); color: #2A4A2C; }
   .badge-dough { background: var(--gold-light); color: #7A5810; }
+
+  /* Course badges (current taxonomy) */
+  .badge-breakfast { background: var(--gold-light); color: #7A5810; }
+  .badge-starters { background: var(--sage-light); color: #2A4A2C; }
+  .badge-mains { background: var(--terracotta-light); color: #7A3018; }
+  .badge-sides { background: var(--sage-light); color: #2A4A2C; }
+  .badge-desserts { background: #F3DCE8; color: #7A2850; }
  
   .card-fav {
     position: absolute;
@@ -681,3 +688,161 @@
   .card:nth-child(2) { animation-delay: 0.1s; }
   .card:nth-child(3) { animation-delay: 0.15s; }
   .card:nth-child(4) { animation-delay: 0.2s; }
+
+  /* ── Difficulty label + legend ── */
+  .difficulty { align-items: center; }
+  .diff-label {
+    margin-left: 5px;
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--ink-light);
+  }
+
+  .difficulty-legend {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--ink-light);
+  }
+  .difficulty-legend .difficulty ~ .difficulty { margin-left: 14px; }
+
+  .tag-diet.active {
+    background: var(--sage);
+    border-color: var(--sage);
+    color: white;
+  }
+
+  /* ── Landing (home) ── */
+  .landing {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .home-hero {
+    text-align: center;
+    padding: 84px 1rem 56px;
+  }
+
+  .home-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 10px 0 18px;
+  }
+
+  .home-hero h1 em { font-style: italic; color: var(--terracotta); }
+
+  .hero-sub {
+    font-size: 1.15rem;
+    font-weight: 300;
+    color: var(--ink-mid);
+    margin-bottom: 32px;
+  }
+
+  .hero-actions { margin-bottom: 44px; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--terracotta);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+    opacity: 0.95;
+  }
+
+  .home-section { margin: 0 0 60px; }
+
+  .home-section-label {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--ink-light);
+    margin-bottom: 18px;
+  }
+
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .quick-link {
+    padding: 9px 20px;
+    border-radius: 50px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    color: var(--ink-mid);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.15s;
+  }
+
+  .quick-link:hover {
+    border-color: var(--terracotta);
+    color: var(--terracotta);
+    transform: translateY(-2px);
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .view-all {
+    color: var(--terracotta);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .view-all:hover { text-decoration: underline; }
+
+  .landing .grid { max-width: none; margin: 0; padding: 0; }
+
+  /* ── Browse page ── */
+  #browse-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 44px 2rem 0;
+  }
+
+  .browse-head { margin-bottom: 26px; }
+
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .page-sub {
+    color: var(--ink-mid);
+    font-weight: 300;
+    margin-top: 6px;
+  }
+
+  #browse-page .filters { max-width: none; margin: 0 0 8px; padding: 0; }
+  #browse-page .grid { max-width: none; margin: 24px 0 80px; padding: 0; }

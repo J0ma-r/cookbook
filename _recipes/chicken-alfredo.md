@@ -3,7 +3,7 @@ layout: recipe
 title: Chicken Alfredo
 image: /assets/images/chicken-alfredo.jpg
 description: Creamy pasta with chicken and parmesan
-category: Pasta
+category: Mains
 time: 30 min
 servings: 4
 difficulty: 1

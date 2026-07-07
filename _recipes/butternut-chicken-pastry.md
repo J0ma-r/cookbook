@@ -3,7 +3,7 @@ layout: recipe
 title: Butternut & Chicken Pastry
 image: /assets/images/butternut-chicken-pastry.jpg
 description: Puff pastry tart with roast butternut, chicken and mozzarella.
-category: Chicken
+category: Mains
 time: 50 min
 servings: 4
 difficulty: 2

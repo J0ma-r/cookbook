@@ -3,7 +3,7 @@ layout: recipe
 title: Gyoza
 image: /assets/images/gyoza.jpg
 description: Pan-fried Japanese pork and cabbage dumplings, crisp on the bottom and steamed on top.
-category: Dumplings
+category: Mains
 time: 1 hr
 servings: 4
 difficulty: 3

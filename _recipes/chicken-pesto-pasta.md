@@ -3,7 +3,7 @@ layout: recipe
 title: Pierre's Chicken Pesto Pasta
 image: /assets/images/chicken-pesto-pasta.svg
 description: Creamy chicken pesto pasta with sun-dried tomatoes and parmesan — Italian comfort in 20 minutes.
-category: Pasta
+category: Mains
 time: 20 min
 servings: 6
 difficulty: 1

@@ -4,7 +4,9 @@ layout: default
 
 <div class="recipe-page active">
 
-  <a class="back-btn" href="{{ '/' | relative_url }}">&larr; Back to all recipes</a>
+  <a class="back-btn" href="{{ '/recipes/' | relative_url }}">&larr; Back to all recipes</a>
+
+  {% assign diffwords = "Easy,Medium,Hard" | split: "," %}
 
   <img class="recipe-hero-img"
        src="{{ page.image | relative_url }}"
@@ -28,12 +30,14 @@ layout: default
       </span>
       {% endif %}
       {% if page.difficulty %}
-      <span class="r-meta">
+      {% assign di = page.difficulty | minus: 1 %}
+      <span class="r-meta" title="Difficulty: {{ diffwords[di] }}">
         <span class="difficulty">
           {% for i in (1..3) %}
           <span class="dot{% if i <= page.difficulty %} filled{% endif %}"></span>
           {% endfor %}
         </span>
+        {{ diffwords[di] }}
       </span>
       {% endif %}
     </div>

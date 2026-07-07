@@ -3,7 +3,8 @@ layout: recipe
 title: Chickpea Curry
 image: /assets/images/chickpea-curry.jpg
 description: A quick coconut chickpea curry with greens.
-category: Vegetarian
+category: Mains
+vegetarian: true
 time: 30 min
 servings: 4
 difficulty: 1

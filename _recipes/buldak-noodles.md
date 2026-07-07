@@ -3,7 +3,7 @@ layout: recipe
 title: Kerusha's Buldak Noodles
 image: /assets/images/buldak-noodles.svg
 description: Flexible Korean-inspired noodles built around Buldak instant noodles — pick your heat, add any protein and veg you have.
-category: Noodles
+category: Mains
 time: 30 min
 servings: 2
 difficulty: 1
