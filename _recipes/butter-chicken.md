@@ -4,6 +4,7 @@ title: Shanay's Butter Chicken
 image: /assets/images/butter-chicken.svg
 description: Rich, creamy Indian butter chicken — spice-marinated chicken in a velvety tomato-cream sauce finished with butter.
 category: Mains
+tags: [Warm]
 featured: true
 time: 1 hr 25 min
 servings: 4

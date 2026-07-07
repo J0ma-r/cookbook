@@ -4,6 +4,7 @@ title: Banana Pancakes
 image: /assets/images/banana-pancakes.jpg
 description: Three-ingredient banana pancakes.
 category: Breakfast
+tags: [Healthy, Warm]
 time: 15 min
 servings: 2
 difficulty: 1

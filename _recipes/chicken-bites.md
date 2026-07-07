@@ -4,6 +4,7 @@ title: Chicken Bites
 image: /assets/images/chicken-bites.jpg
 description: Sticky teriyaki chicken with onion soup and sesame.
 category: Mains
+tags: [Warm]
 time: 35 min
 servings: 3
 difficulty: 1

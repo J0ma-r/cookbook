@@ -5,6 +5,9 @@ title: The Virtual Cookbook
 
 {% assign cats = site.recipes | map: "category" | uniq | sort %}
 {% assign diffwords = "Easy,Medium,Hard" | split: "," %}
+{% assign tagstr = "" %}
+{% for r in site.recipes %}{% for t in r.tags %}{% assign tagstr = tagstr | append: t | append: "," %}{% endfor %}{% endfor %}
+{% assign alltags = tagstr | split: "," | uniq | sort %}
 
 <div class="landing">
 
@@ -12,6 +15,11 @@ title: The Virtual Cookbook
     <p class="hero-eyebrow">Home Cooking</p>
     <h1>The Virtual<br><em>Cookbook</em></h1>
     <p class="hero-sub">A recipe for any occasion.</p>
+
+    <form class="home-search" action="{{ '/recipes/' | relative_url }}" method="get" role="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+      <input type="text" name="q" placeholder="Search recipes or ingredients&hellip;" aria-label="Search recipes or ingredients">
+    </form>
 
     <div class="hero-actions">
       <a class="btn-primary" href="{{ '/recipes/' | relative_url }}">Browse all recipes</a>
@@ -35,7 +43,9 @@ title: The Virtual Cookbook
       {% for cat in cats %}
       <a class="quick-link" href="{{ '/recipes/' | relative_url }}#{{ cat | downcase }}">{{ cat }}</a>
       {% endfor %}
-      <a class="quick-link" href="{{ '/recipes/' | relative_url }}#vegetarian">Vegetarian</a>
+      {% for t in alltags %}
+      <a class="quick-link quick-link-attr" href="{{ '/recipes/' | relative_url }}#{{ t | downcase }}">{{ t }}</a>
+      {% endfor %}
     </div>
   </section>
 

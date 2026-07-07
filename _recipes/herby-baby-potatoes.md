@@ -4,7 +4,7 @@ title: Andrew's Herby Baby Potatoes
 image: /assets/images/herby-baby-potatoes.svg
 description: Crispy-outside, soft-inside herby potatoes — the perfect braai side for fish, chicken, meat or burgers.
 category: Sides
-vegetarian: true
+tags: [Vegetarian, Warm]
 time: 1 hr 10 min
 servings: 4
 difficulty: 1

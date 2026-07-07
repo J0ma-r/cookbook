@@ -4,6 +4,7 @@ title: Natalia's Creamy Garlic Seafood Pasta
 image: /assets/images/seafood-pasta.svg
 description: Restaurant-quality pasta with prawns, calamari and mussels in a garlic, white wine and cream sauce.
 category: Mains
+tags: [Warm]
 time: 30 min
 servings: 4
 difficulty: 2

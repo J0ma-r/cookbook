@@ -4,6 +4,7 @@ title: Chocolate Chip Oat Balls
 image: /assets/images/oat-balls.jpg
 description: No-bake peanut butter oat energy balls.
 category: Desserts
+tags: [Healthy, Cold]
 time: 15 min
 servings: 12
 difficulty: 1

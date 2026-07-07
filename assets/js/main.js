@@ -24,15 +24,17 @@ function toggleTag(el, tag) {
 function filterCards() {
   const input = document.getElementById('searchInput');
   if (!input) return;
-  const q = input.value.toLowerCase();
+  const q = input.value.trim().toLowerCase();
   const cards = document.querySelectorAll('.card');
   let visible = 0;
   cards.forEach(card => {
     const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
+    const ingredients = card.dataset.ingredients || '';
     const tags = (card.dataset.tags || '').split(/\s+/);
     // Multi-select is OR: show a card if it matches ANY selected tag.
     const matchTag = activeTags.size === 0 || [...activeTags].some(t => tags.includes(t));
-    const matchQ = !q || title.includes(q);
+    // Search matches the recipe name OR any ingredient.
+    const matchQ = !q || title.includes(q) || ingredients.includes(q);
     const show = matchTag && matchQ;
     card.style.display = show ? '' : 'none';
     if (show) visible++;
@@ -217,6 +219,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   // Browse page only
   if (document.getElementById('recipeGrid')) {
+    // Search term arriving from the home page search box (/recipes/?q=...)
+    const params = new URLSearchParams(location.search);
+    const q = params.get('q');
+    const searchInput = document.getElementById('searchInput');
+    if (q && searchInput) searchInput.value = q;
     applyHashFilter();
     filterCards();
   }

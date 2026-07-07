@@ -4,6 +4,7 @@ title: Oom Pierre & Tannie Sonnet's Custard Slices (Vlaskywe)
 image: /assets/images/custard-slices.svg
 description: Creamy custard between cream cracker layers with smooth icing — the beloved Huisgenoot classic by Mrs Adelaide Trüter.
 category: Desserts
+tags: [Cold]
 time: 40 min + overnight
 servings: 30
 difficulty: 2

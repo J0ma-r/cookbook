@@ -4,7 +4,7 @@ title: Dosa
 image: /assets/images/dosa.jpg
 description: A savoury Indian-style pancake with a spiced potato filling.
 category: Mains
-vegetarian: true
+tags: [Vegetarian, Healthy, Warm]
 time: 45 min
 servings: 3
 difficulty: 2

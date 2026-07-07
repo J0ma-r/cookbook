@@ -4,6 +4,7 @@ title: Werner's Lemon Meringue Tart
 image: /assets/images/lemon-meringue.svg
 description: Classic South African lemon meringue — buttery Marie biscuit crust, tangy condensed-milk lemon filling, pillowy meringue.
 category: Desserts
+tags: [Cold]
 time: 1 hr 5 min
 servings: 8
 difficulty: 2
