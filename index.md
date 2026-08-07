@@ -23,8 +23,10 @@ title: The Virtual Cookbook
       <p class="hero-sub">A recipe for any occasion.</p>
 
       <form class="home-search" action="{{ '/recipes/' | relative_url }}" method="get" role="search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
         <input type="text" name="q" placeholder="Search recipes or ingredients&hellip;" aria-label="Search recipes or ingredients">
+        <button type="submit" class="home-search-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
       </form>
 
       <div class="hero-actions">
