@@ -31,8 +31,8 @@ function filterCards() {
     const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
     const ingredients = card.dataset.ingredients || '';
     const tags = (card.dataset.tags || '').split(/\s+/);
-    // Multi-select is OR: show a card if it matches ANY selected tag.
-    const matchTag = activeTags.size === 0 || [...activeTags].some(t => tags.includes(t));
+    // Multi-select is AND: show a card only if it matches EVERY selected tag.
+    const matchTag = activeTags.size === 0 || [...activeTags].every(t => tags.includes(t));
     // Search matches the recipe name OR any ingredient.
     const matchQ = !q || title.includes(q) || ingredients.includes(q);
     const show = matchTag && matchQ;
