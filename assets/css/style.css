@@ -789,7 +789,7 @@
     overflow: hidden;
     text-align: center;
     padding: 96px 1.5rem 84px;
-    margin-top: 24px;
+    margin: 24px 0 56px;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border);
     box-shadow: var(--shadow);
