@@ -1,8 +1,8 @@
 title: The Virtual Cookbook
 description: A recipe for any occasion
 
-baseurl: "/cookbook"
-url: "https://j0ma-r.github.io"
+baseurl: ""
+url: ""
 
 collections:
   recipes:
