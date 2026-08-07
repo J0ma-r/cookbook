@@ -19,10 +19,12 @@ permalink: /recipes/
 
   <div class="filters">
     <div class="filters-top">
-      <div class="search-wrap">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+      <form class="search-wrap" role="search" onsubmit="filterCards(); return false;">
         <input class="search-input" id="searchInput" type="text" placeholder="Search recipes or ingredients&hellip;" oninput="filterCards()">
-      </div>
+        <button type="submit" class="search-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+      </form>
       <p class="difficulty-legend">
         <span class="difficulty"><span class="dot filled"></span><span class="dot"></span><span class="dot"></span></span> Easy
         <span class="difficulty"><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span></span> Medium
