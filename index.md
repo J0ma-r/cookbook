@@ -11,28 +11,35 @@ title: The Virtual Cookbook
 
 <div class="landing">
 
+  {% assign mosaic = "smash-burger,neapolitan-pizza,chicken-alfredo,honey-cake,sausage-paella,gnocchi,korean-chicken-bao,chickpea-curry,gyoza,dosa,banana-pancakes,meatballs" | split: "," %}
   <section class="home-hero">
-    <p class="hero-eyebrow">Home Cooking</p>
-    <h1>The Virtual<br><em>Cookbook</em></h1>
-    <p class="hero-sub">A recipe for any occasion.</p>
-
-    <form class="home-search" action="{{ '/recipes/' | relative_url }}" method="get" role="search">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
-      <input type="text" name="q" placeholder="Search recipes or ingredients&hellip;" aria-label="Search recipes or ingredients">
-    </form>
-
-    <div class="hero-actions">
-      <a class="btn-primary" href="{{ '/recipes/' | relative_url }}">Browse all recipes</a>
+    <div class="hero-mosaic" aria-hidden="true">
+      {% for pass in (1..2) %}{% for slug in mosaic %}<img src="{{ '/assets/images/' | append: slug | append: '.jpg' | relative_url }}" alt="" loading="lazy">{% endfor %}{% endfor %}
     </div>
 
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-num">{{ site.recipes | size }}</span>
-        <span class="stat-label">Recipes</span>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Home Cooking</p>
+      <h1>The Virtual<br><em>Cookbook</em></h1>
+      <p class="hero-sub">A recipe for any occasion.</p>
+
+      <form class="home-search" action="{{ '/recipes/' | relative_url }}" method="get" role="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" name="q" placeholder="Search recipes or ingredients&hellip;" aria-label="Search recipes or ingredients">
+      </form>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="{{ '/recipes/' | relative_url }}">Browse all recipes</a>
       </div>
-      <div class="stat">
-        <span class="stat-num">{{ cats | size }}</span>
-        <span class="stat-label">Categories</span>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">{{ site.recipes | size }}</span>
+          <span class="stat-label">Recipes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">{{ cats.size | plus: alltags.size }}</span>
+          <span class="stat-label">Categories</span>
+        </div>
       </div>
     </div>
   </section>
