@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Marco's Pastéis de Nata
-image: /assets/images/pasteis-de-nata.svg
+image: /assets/images/pasteis-de-nata.jpg
 description: As close to authentic Portuguese custard tarts as you can get — rich egg custard in shatteringly crisp pastry.
 category: Desserts
 tags: [Warm]

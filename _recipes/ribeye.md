@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Hein's Perfect Ribeye for 2
-image: /assets/images/ribeye.svg
+image: /assets/images/ribeye.jpg
 description: Flame-grilled, herb-infused ribeye rested on a bed of garlic, thyme and rosemary with salted butter. Ideal medium-rare.
 category: Mains
 tags: [Warm]

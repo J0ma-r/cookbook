@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Randall's Bobotie
-image: /assets/images/bobotie.svg
+image: /assets/images/bobotie.jpg
 description: Traditional South African spiced lamb mince bake with apple, raisins and almonds under a savoury egg custard, served with geelrys.
 category: Mains
 tags: [Warm]

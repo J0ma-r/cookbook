@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Andy's Triple Chocolate Cake
-image: /assets/images/triple-chocolate-cake.svg
+image: /assets/images/triple-chocolate-cake.jpg
 description: Deeply moist two-layer chocolate cake with chocolate buttercream and chocolate chips — the hot coffee intensifies the chocolate.
 category: Desserts
 tags: [Cold]

@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Renette's Ouma's Curry Mince
-image: /assets/images/curry-mince.svg
+image: /assets/images/curry-mince.jpg
 description: A family-favourite South African curry mince — rich, mildly spiced and warming. Best served with homemade vetkoek.
 category: Mains
 tags: [Warm]
