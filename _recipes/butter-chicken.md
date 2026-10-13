@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Shanay's Butter Chicken
-image: /assets/images/butter-chicken.svg
+image: /assets/images/butter-chicken.jpg
 description: Rich, creamy Indian butter chicken — spice-marinated chicken in a velvety tomato-cream sauce finished with butter.
 category: Mains
 tags: [Warm]

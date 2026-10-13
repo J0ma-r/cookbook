@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Ryan's Mediterranean Quinoa Salad
-image: /assets/images/quinoa-salad.svg
+image: /assets/images/quinoa-salad.jpg
 description: Bright, gluten-free quinoa salad with crunchy peppers, cucumber, feta and olives in a lemony oregano vinaigrette.
 category: Starters
 tags: [Vegetarian, Healthy, Cold]

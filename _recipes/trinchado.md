@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Adi's Trinchado
-image: /assets/images/trinchado.svg
+image: /assets/images/trinchado.jpg
 description: Rich, slow-simmered Portuguese-South African beef stew with paprika, chilli, red wine and cream. Best made a day ahead.
 category: Mains
 tags: [Warm]

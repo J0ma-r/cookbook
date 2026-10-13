@@ -1,8 +1,9 @@
 # Recipe image prompts
 
-The 19 recipes added from *From the Sinov8 Kitchen* currently use placeholder
-`.svg` images (emoji on a coloured gradient). The 18 original recipes already
-have real `.jpg` photos.
+The 19 recipes added from *From the Sinov8 Kitchen* started with placeholder
+`.svg` images (emoji on a coloured gradient). Photos for these were generated
+with Gemini (Nano Banana) using the prompts below, which are kept here so a
+photo can be regenerated in the same style.
 
 To replace a placeholder with a real (AI-generated or photographed) image:
 
@@ -42,5 +43,4 @@ Target size ~1200×900 (4:3), which matches the card aspect ratio.
 | `custard-slices.jpg` | South African custard slices (vlaskywe) — thick creamy custard between cream cracker biscuits topped with white icing, cut into squares |
 | `pasteis-de-nata.jpg` | Portuguese pastéis de nata — custard tarts with caramelised blistered tops and crisp flaky pastry, dusted with cinnamon, on a plate |
 
-Once real photos exist for all 19, the `.svg` placeholders in `assets/images/`
-can be deleted.
+When a placeholder is replaced, delete its `.svg` from `assets/images/`.
