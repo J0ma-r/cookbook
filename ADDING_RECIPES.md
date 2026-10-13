@@ -19,9 +19,12 @@ ingredients:
   - name: Tomatoes, chopped
     amount: 800
     unit: g
-  - name: Garlic clove
+  - name: Garlic
     amount: 2
-    unit: ""             # leave unit empty for countable items
+    unit: cloves         # countable items need a count unit (see below)
+  - name: Avocados, sliced
+    amount: 2
+    unit: medium         # medium/large/small work for whole items
   - name: Salt
     amount: 0            # amount 0 = non-scaling line
     unit: to taste
@@ -60,7 +63,13 @@ Serving scaling & units:
   - Volume: `tsp`, `tbsp`, `cup`, `ml`, `L` (metric: cup 250 ml, tbsp 15, tsp 5).
     Fractional spoons become `ml`; large volumes become `L`.
   - Weight: `g`, `kg`.
-  - Countable: `piece(s)`, `clove(s)`, `egg(s)`, `slice(s)`, `can(s)`, etc.
+  - Countable: `piece(s)`, `clove(s)`, `egg(s)`, `slice(s)`, `can(s)`,
+    `tin(s)`, `packet(s)`, `sheet(s)`, `loaf`/`loaves`, `knob(s)`, `bulb(s)`,
+    `stalk(s)`, and the sizes `small`, `medium`, `large` (e.g. 2 `medium`
+    avocados, 4 `large` wraps).
   - Anything else (`to taste`, `a handful`, `pinch`…) is treated as non-scaling
     text — pair it with `amount: 0`.
+- Any ingredient with `amount` above 0 **must** use one of the units above.
+  An empty unit (`unit: ""`) only works with `amount: 0`. `npm test` fails on
+  an unrecognised unit for a scalable amount.
 - Avoid dual units like `cups (219 g)`; pick one (grams are best for baking).
