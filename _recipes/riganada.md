@@ -1,7 +1,7 @@
 ---
 layout: recipe
 title: Fabio's Riganada
-image: /assets/images/riganada.svg
+image: /assets/images/riganada.jpg
 description: Greek tomato and feta bruschetta from Kefalonia — toasted bread, ripe tomatoes, feta, oregano and olive oil.
 category: Starters
 tags: [Vegetarian, Cold]
